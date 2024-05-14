@@ -294,10 +294,10 @@
         return content;
       },
       typeItemHeight(type) {
-        return this.$refs[type].$el.querySelector('li').offsetHeight;
+        return parseInt(window.getComputedStyle(this.$refs[type].$el.querySelector('li')).height);
       },
       scrollBarHeight(type) {
-        return this.$refs[type].$el.offsetHeight;
+        return parseInt(window.getComputedStyle(this.$refs[type].$el).height);
       }
     }
   };
